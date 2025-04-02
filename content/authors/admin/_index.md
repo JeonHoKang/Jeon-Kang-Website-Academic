@@ -87,7 +87,7 @@ work:
     company_logo: ''
     date_start: 2021-01-01
     date_end: ''
-    summary: |2-
+    summary: |
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -96,8 +96,8 @@ work:
     company_name: X
     company_url: ''
     company_logo: 'images/HRI.png'
-    date_start: 2025-05
-    date_end: 2025-08
+    date_start: 2025-05-01
+    date_end: 2025-08-01
     # summary: |
 
 
