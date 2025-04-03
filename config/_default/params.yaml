@@ -4,6 +4,8 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
+favicon: "icon.png"
+
 appearance:
   mode: system
   color: emerald
@@ -33,19 +35,20 @@ header:
     blox: "navbar"
     fixed_to_top: true
     show_search: true
-    show_theme_chooser: true
+    show_theme_chooser: false
     logo:
-      text: "Your Name"
+      text: "Jeon Kang"
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Jeon Kang.'
     license:
       enable: true
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
+
 
 # Localization
 locale:

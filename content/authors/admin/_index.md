@@ -45,7 +45,8 @@ profiles:
     url: https://scholar.google.com/citations?user=-EeDGVUAAAAJ&hl=en
   # - icon: academicons/orcid
   #   url: https://orcid.org/
-
+  - icon: custom/researchgate
+    url:  https://www.researchgate.net/profile/Jeon-Kang?ev=hdr_xprf
 interests:
   - Deep Learning
   - Robotics
@@ -60,9 +61,9 @@ education:
     # date_end: 2026
     # summary: |
 
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
+    # button:
+    #   text: 'Read Thesis'
+    #   url: 'https://example.com'
   - area: MS in Mechanical Engineering (Automation) 2023
     institution: University of Southern California
     # date_start: 2016-01-01
@@ -84,7 +85,7 @@ work:
   - position: 
     company_name: Honda Research Institute
     company_url: ''
-    company_logo: ''
+    company_logo: 'brands/HRI.png'
     date_start: 2021-01-01
     date_end: ''
     summary: |
@@ -92,12 +93,12 @@ work:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: 'images/HRI.png'
-    date_start: 2025-05-01
-    date_end: 2025-08-01
+  # - position: Backend Software Engineer
+  #   company_name: X
+  #   company_url: ''
+  #   company_logo: 'images/HRI.png'
+  #   date_start: 2025-05-01
+  #   date_end: 2025-08-01
     # summary: |
 
 
@@ -167,4 +168,4 @@ awards:
 
 ## About Me
 
-My research focuses on using recent developments in deep learning with different sensory modalities to enhance flexibility in robot learning. Particularly, I am fascinated by decision making during task driven by multi-sensory input such as force, tactile and language. I have published first author papers to three (One under review CASE 2025) including ICRA2024, RA-L(Journal) and have published to have three ASME papers including MSEC and iDETC. Our MSEC 2024 paper won Best Conference Paper Award (2nd place). 
+My research centers on leveraging recent advancements in deep learning and multi-sensory perception to improve flexibility in robot learning. I am particularly interested in decision-making for task execution driven by diverse sensory inputs such as force, tactile feedback, and language. I have authored three first-author publications — including papers in ICRA 2024 and RA-L, with one currently under review for CASE 2025. Additionally, I have contributed to three ASME conference papers (MSEC and IDETC), with our MSEC 2024 paper receiving the Best Conference Paper Award (2nd place).

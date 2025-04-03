@@ -4,19 +4,17 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name
-title: JeonHoKang
+title: Jeon Ho Kang
 # Website URL
 baseURL: 'https://example.com/'
 
 ############################
 ## LANGUAGE
 ############################
-
 defaultContentLanguage: en
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
-
 ############################
 ## ADVANCED
 ############################
