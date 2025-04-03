@@ -10,6 +10,7 @@ design:
 
 sections:
   - block: resume-biography-3
+    id: home
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
@@ -17,7 +18,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/resume.pdf
+        url: uploads/CV2_JeonhoKang_Web.pdf
     design:
       css_class: dark
       background:
@@ -30,17 +31,25 @@ sections:
           size: cover
           position: center
           parallax: false
+        text:
+          size: 1.5em
   - block: markdown
     content:
       title: 'News'
       subtitle: ''
+      text:
+      filters:
+        folders: 
+          - news
+    # design:
+    #   background:
+        # image:
+        #   filename: wave_line.svg
     design:
-      background:
-        image:
-          filename: wave_line.svg
-      view: article-grid
-      columns: '3'
+      view: article-list
+      columns: 3
     active: true
+    
   - block: collection
     id: research
     content:

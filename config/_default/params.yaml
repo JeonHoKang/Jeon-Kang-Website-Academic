@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
-favicon: "icon.png"
+favicon: "assets/media/icons/icon.png"
 
 appearance:
   mode: system
