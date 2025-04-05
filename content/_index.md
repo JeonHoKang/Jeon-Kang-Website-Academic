@@ -20,47 +20,56 @@ sections:
         text: Download CV
         url: uploads/CV2_JeonhoKang_Web.pdf
     design:
-      css_class: dark
+      css_class: dark main
       background:
         color: black
-        image:
-          # Add your image background to `assets/media/`.
-          filename: wave_line.svg
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
-        text:
-          size: 1.5em
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+        # text:
+        #   size: 4em
+
   - block: markdown
-    content:
-      title: 'News'
-      subtitle: ''
-      text:
-      filters:
-        folders: 
-          - news
-    # design:
-    #   background:
-        # image:
-        #   filename: wave_line.svg
+    id: news
+    weight: 25
+    content: 
+      text: |-
+        ## News
+        - **April 2025**: Now our paper, code and dataset can be accessed via [Arxiv](https://arxiv.org/abs/2503.03998), [Papers with code](https://cs.paperswithcode.com/paper/robotic-compliant-object-prying-using), and [Hugging Face](https://huggingface.co/datasets/Jeon-hk/Battery_Prying_Dataset/blob/main/README.md) !
+        - **March 2025**: Looking forward to interning at **Honda Resarch Institute** this summer as Resesarch Scientist Intern working on **Behavior Models for Dexterous Manipulation**!
+        - **March 2025**: Our paper on Compliant Object prying has been accepted on Robotics and Automation Letters!
+        - **March 2024**: Our paper at MSEC 2024 won the **Best Conference Paper Award**!
+        - **February 2024**: Our paper on **Lage Language Moddels for Contingency Recovery and Task Allocation** has been accepted for publication at **ICRA 2024**!
+
     design:
-      view: article-list
-      columns: 3
-    active: true
-    
+      columns: '2'
+      css_style: 'font-size: 2.0rem; text-align: left; width: 100%; max-width: none'
+      css_class: custom-bullets
+      background:
+        color: light
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 60
+      
   - block: collection
     id: research
     content:
       title: Research
       filters:
         folders:
-          - research
-        featured_only: false
+          - publication
+        featured_only: true
     design:
       view: article-grid
       columns: 2
+      css_class: dark
+      background:
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
   - block: collection
     id: publications
     content:
@@ -72,6 +81,13 @@ sections:
         exclude_featured: false
     design:
       view: citation
+      css_class: dark citation-dark
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
   - block: collection
     id: projects
     content:
@@ -79,61 +95,60 @@ sections:
       filters:
         folders:
           - project
-    design:
-      view: article-list
-      columns: 3
-  - block: collection
-    id: awards
-    content:
-      title: "Awards"
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: post
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        folders: 
-         - awards
-      # Choose how many pages you would like to offset by
-      design:
-        view: table
-        columns: 1
-  - block: collection
-    id: experience
-    content:
-      title: Experience
-      filters:
-        folders:
-          - experience
+        
     design:
       view: article-grid
-      columns: 1
+      columns: 3
+      css_class: dark
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+
+
+  - block: resume-experience
+    id: experience
+    content:
+      # title: Experience
+      username: admin
     design:
-      # Choose a layout view
-      view: date-title-summary
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
-  # - block: cta-card
-  #   demo: true # Only display this section in the Hugo Blox Builder demo site
+      css_class:  custom-position dark
+
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+      date_format z: 'January 2006'
+      # Education or Experience section first?
+      is_education_first: false
+  # - block: resume-skills
   #   content:
-  #     title: 👉 Build your own academic website like this
-  #     text: |-
-  #       This site is generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
+  #     title: Skills
+  #     username: admin
 
-  #       <a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a>
+  # - block: resume-languages
+  #   content:
+  #     title: Languages
+  #     username: admin
 
-  #       Easily build anything with blocks - no-code required!
-        
-  #       From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-  #     button:
-  #       text: Get Started
-  #       url: https://hugoblox.com/templates/
-  #   design:
-  #     card:
-  #       # Card background color (CSS class)
-  #       css_class: "bg-primary-700"
-  #       css_style: ""
+  - block: resume-awards
+    id: awards
+    content:
+      title: Awards
+      username: admin
+    design:
+      css_class: dark
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+        text:
+          size: 1.5em
+
 ---

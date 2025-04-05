@@ -5,11 +5,11 @@
 
 # Appearance
 favicon: "assets/media/icons/icon.png"
-
-appearance:
-  mode: system
-  color: emerald
-
+font_size: xl
+scripts:
+  custom:
+    - js/scroll-slow.js
+sharing: false
 # SEO
 marketing:
   seo:
@@ -34,11 +34,12 @@ header:
     enable: true
     blox: "navbar"
     fixed_to_top: true
-    show_search: true
+    show_search: false
     show_theme_chooser: false
+    highlight_active_link: true
     logo:
-      text: "Jeon Kang"
-
+      text: "Jeon Ho Kang"
+    
 # Site footer
 footer:
   copyright:

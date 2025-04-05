@@ -1,3 +1,178 @@
 html {
     scroll-behavior: smooth;
   }
+  
+  .full-width-content .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Optional: tweak inner column layout */
+  .full-width-content .row {
+    flex-wrap: nowrap;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+
+/* Force dark header */
+.header {
+  background-color: #2c3e50 !important; /* dark gray/navy */
+  color: #ffffff !important;
+}
+
+/* Darken the footer */
+.footer {
+  background-color: #2c3e50 !important; /* slightly lighter dark gray */
+  color: #f3f4f6 !important;
+}
+
+/* Try more aggressive footer selectors */
+footer,
+.site-footer,
+.page-footer,
+.footer {
+  background-color: #1f2937 !important; /* dark gray */
+  color: #ffffff !important;
+}
+
+/* Footer links */
+footer a,
+.site-footer a,
+.page-footer a,
+.footer a {
+  color: #ffffff !important;
+}
+
+/* Ensure navbar links stay light */
+.header a,
+.footer a {
+  color: #ffffff !important;
+}
+
+.main p,
+.main h1,
+.main h2,
+.main h3,
+.main h4,
+.main span,
+.main div,
+.citation-dark li,
+.main strong {
+  font-size: 1.3rem;
+}
+
+.bio-text {
+  max-width: 100% !important;
+  width: 100% !important;
+  font-size: 1.2rem;          /* Adjust font size as needed */
+  line-height: 1.7;           /* Better readability */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.text-3xl {
+  font-size: 2.0rem !important
+
+}
+
+.network-icon svg {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  transition: transform 0.2s ease;
+}
+
+
+.span.avatar-emoji {
+  margin-right: 0.5rem;   /* space before name */
+  font-size: 4rem !important; /* make it bigger */
+}
+
+
+.avatar-wrapper {
+  height: 20rem;
+  width: 20rem;
+}
+
+
+.resume-biography .avatar {
+  width: 100%;
+  height: auto;
+  max-width: 20rem;
+  max-height: 20rem;
+  -o-object-fit: cover;
+  object-fit: cover;  
+}
+
+.main p {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.resume-biography {
+  margin-top: -5rem
+}
+
+
+.custom-bullets ul {
+    list-style-type: "🦾"; /* Unicode emoji, or '✔️', '➤', etc. */
+    padding-left: 4.0rem;
+    width: 100%;
+    font-size: 1.2rem;
+    max-width: none;
+    color: white;
+  }
+  
+
+ #news .prose a {
+    color: white !important;
+  }
+
+  /* Target all text inside your custom section */
+.custom-bullets,
+.custom-bullets h2, 
+.custom-bullets p,
+/* .custom-bullets li, */
+.custom-bullets h1,
+.custom-bullets strong {
+  color: white !important; /* or any light color you like */
+}
+
+.custom-position p,
+.custom-position h2 {
+  padding-right: 6.0rem;
+}
+/* .custom-position .title-content-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-left: 4.0rem;
+  width: 100%;
+}
+
+.custom-position .title-box {
+  font-size: 2.5rem;
+  font-weight: 700;
+  
+  flex: 1;
+  color: #ffffff;
+  text-align: left;
+} */
+
+/* Right column: content */
+/* Only apply white to specific content types, NOT links */
+.citation-dark p,
+.citation-dark h1,
+.citation-dark h2,
+.citation-dark h3,
+.citation-dark h4,
+.citation-dark span,
+.citation-dark div,
+.citation-dark li,
+.citation-dark strong,
+.citation-dark .article-metadata {
+  color: #ffffff !important;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes | Jeon Ho Kang</title>
+    <link>http://localhost:1313/home/</link>
+      <atom:link href="http://localhost:1313/home/index.xml" rel="self" type="application/rss+xml" />
+    <description>Homes</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_a837b1033d1a05be.png</url>
+      <title>Homes</title>
+      <link>http://localhost:1313/home/</link>
+    </image>
+    
+    <item>
+      <title>News</title>
+      <link>http://localhost:1313/home/new/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/new/</guid>
+      <description>&lt;h1 id=&#34;markdown&#34;&gt;Markdown&lt;/h1&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -18,8 +18,10 @@ removePathAccents: true
 ############################
 ## ADVANCED
 ############################
+style:
+  custom_css: ["css/custom.css"]
 
-customCSS: ["css/custom.css"]
+
 build:
   writeStats: true
 enableGitInfo: false
