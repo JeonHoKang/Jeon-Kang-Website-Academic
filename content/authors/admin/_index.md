@@ -77,28 +77,32 @@ education:
     institution: University of Southern California
 
 work:
-  - position:  Reseaerch Scientist Intern
+  - position:  Research Scientist Intern
     company_name: Honda Research Institute
     company_url: 'https://usa.honda-ri.com'
-    company_logo: '/brands/HRI.png'
+    logo: HRIlogo.svg
     date_start: 2025-05-01
-    date_end: ''
-    summary: |
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    date_end: 2025-08-01
+    summary: |-
+                          Researh on vision language action models applied on dexterous manipulations tasks
+     
+
   - position:  Graduate Researcher
     company_name: Center for Advanced Manufacturing
     company_url: 'https://sites.usc.edu/rros/'
-    company_logo: '/brands/HRI.png'
-    date_start: 2022-01-01
+    logo: usc.svg
+    date_start: 2022-01-11
+    date_end: 
+    summary: |-
+                      Conduct research on decision making for robot manipulation and task planning for manufacturing and publish to top-tier journals and confereneces.
+
+  - position:  Engineering Intern (Undergraduate)
+    company_name: Versa Products
+    company_url: ''
+    date_start: 2022-01-11
     date_end: ''
     summary: |
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+
   # - position: Backend Software Engineer
   #   company_name: X
   #   company_url: ''
@@ -165,6 +169,12 @@ awards:
     date: '2023-09-25'
 
     awarder: National Science Foundation (NSF)
+
+  - title: Research Featured in [IEEE Video Friday](https://spectrum.ieee.org/video-friday-lunar-base) 
+    # url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+    date: '2023-03-24'
+    
+    awarder: IEEE Spectrum
 
 
 ---

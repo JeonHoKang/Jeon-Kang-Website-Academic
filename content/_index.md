@@ -108,11 +108,13 @@ sections:
         gradient_angle: 30
 
 
-  - block: resume-experience
+  - block: resume-experience 
     id: experience
-    content:
+    content: 
       # title: Experience
       username: admin
+      hide_education: true
+
     design:
       css_class:  custom-position dark
 
@@ -125,6 +127,7 @@ sections:
       date_format z: 'January 2006'
       # Education or Experience section first?
       is_education_first: false
+      
   # - block: resume-skills
   #   content:
   #     title: Skills
@@ -135,10 +138,11 @@ sections:
   #     title: Languages
   #     username: admin
 
+  
   - block: resume-awards
     id: awards
     content:
-      title: Awards
+      title: Accomplishments
       username: admin
     design:
       css_class: dark

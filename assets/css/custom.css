@@ -124,6 +124,9 @@ footer a,
     color: white;
   }
   
+.blox-resume-experience .text-gray-300  {
+  width: 120% ;
+}
 
  #news .prose a {
     color: white !important;
