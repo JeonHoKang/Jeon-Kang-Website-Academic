@@ -66,7 +66,7 @@
 
   
     
-    <link href="/css/custom.min.945ba83475e9bb7db055aa7294bd0aa8e3698017b5e129b41449742a40902d76.css" rel="stylesheet" />
+    <link href="/css/custom.min.e5993a1b4e5800d20642dc77aec1ad7a33b47402f881be38def48b50cf7b9579.css" rel="stylesheet" />
   
 
   <script>
@@ -1799,7 +1799,7 @@
                         
                   
                         
-                        <div class="flex flex-col">
+                        <div class="flex flex-col flex-1">
                           <h3 class="text-lg font-semibold">Research Scientist Intern</h3>
                           <p class="text-primary-400 font-medium">Honda Research Institute</p>
                           <p class="text-sm text-gray-400 mt-1">
@@ -1811,7 +1811,7 @@
                             
                             
                           </p>
-                          <p class="mt-3 text-sm text-gray-300">Researh on vision language action models applied on dexterous manipulations tasks</p>
+                          <p class="mt-2  text-sm text-gray-300">Researh on vision language action models applied on dexterous manipulations tasks</p>
 
                       </div>
                     </div>
@@ -1838,7 +1838,7 @@
                         
                   
                         
-                        <div class="flex flex-col">
+                        <div class="flex flex-col flex-1">
                           <h3 class="text-lg font-semibold">Graduate Researcher</h3>
                           <p class="text-primary-400 font-medium">Center for Advanced Manufacturing</p>
                           <p class="text-sm text-gray-400 mt-1">
@@ -1850,7 +1850,7 @@
                             
                             
                           </p>
-                          <p class="mt-3 text-sm text-gray-300">Conduct research on decision making for robot manipulation and task planning for manufacturing and publish to top-tier journals and confereneces.</p>
+                          <p class="mt-2  text-sm text-gray-300">Conduct research on decision making for robot manipulation and task planning for manufacturing and publish to top-tier journals and confereneces.</p>
 
                       </div>
                     </div>
@@ -1873,7 +1873,7 @@
                         
                   
                         
-                        <div class="flex flex-col">
+                        <div class="flex flex-col flex-1">
                           <h3 class="text-lg font-semibold">Engineering Intern (Undergraduate)</h3>
                           <p class="text-primary-400 font-medium">Versa Products</p>
                           <p class="text-sm text-gray-400 mt-1">
@@ -1885,7 +1885,7 @@
                             
                             
                           </p>
-                          <p class="mt-3 text-sm text-gray-300"></p>
+                          <p class="mt-2  text-sm text-gray-300"></p>
 
                       </div>
                     </div>
@@ -2068,7 +2068,19 @@
 
 
 <body class="overflow-x-hidden">
-  
+  <div class="w-full max-w-3xl mx-auto mb-6 grid gap-4 sm:grid-cols-3">
+      <input
+        type="text"
+        id="pubSearch"
+        placeholder="Search title/abstract"
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      />
+      <input
+        type="text"
+        id="pubAuthor"
+        placeholder="Search author."
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      />
       
       
       
@@ -2106,7 +2118,20 @@
         
       
       
-      
+      <select
+        id="pubYear"
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      >
+        <option value="">All Years</option>
+        
+          <option value="2025">2025</option>
+        
+          <option value="2024">2024</option>
+        
+          <option value="2023">2023</option>
+        
+      </select>
+    </div>
   
 
 
@@ -3811,7 +3836,7 @@ Open Access: Research Gate</a></p>
       
 
       <span class="skills-name text-gray-700 dark:text-gray-300 text-5xl font-semibold">
-        CS 182 - Designing, Visualizing and Understanding Deep Neural Networks
+        CS 182 - Designing, Visualizing and </br> Understanding Deep </br> Neural Networks
         <p class="skills-description">Great course taught by Professor Sergey Levine: <a href="https://cs182sp21.github.io" target="_blank" rel="noopener">Syllabus</a>. Spans from basic affine transform, regularization techniques. Then goes in to different architectures like CNN, RNN and Transformers. Touches on different applications like natural language processing, computer vision and imitation learning for self-driving cars and robotics.</p>
       </span>
       
@@ -3845,7 +3870,7 @@ Open Access: Research Gate</a></p>
       
 
       <span class="skills-name text-gray-700 dark:text-gray-300 text-5xl font-semibold">
-        AME 540 - Probability and Statistics for Engineering Science
+        AME 540 - Probability and  </br> Statistics for Engineering Science
         <p class="skills-description">Course taught at USC by Professor <a href="https://viterbi.usc.edu/directory/faculty/Oberai/Assad" target="_blank" rel="noopener">Assad Obeai</a>. Touches on introductory theories behind probability like random variables and vectors, Conditional distributions and Bayes theorem, and stocahstic processes and its applications</p>
       </span>
       

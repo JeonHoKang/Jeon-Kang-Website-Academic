@@ -117,7 +117,6 @@ footer a,
 
 
 
-
 .custom-bullets ul {
     list-style-type: "🦾"; /* Unicode emoji, or '✔️', '➤', etc. */
     padding-left: 4.0rem;
@@ -155,7 +154,7 @@ footer a,
 
 .custom-position p,
 .custom-position h2 {
-  padding-right: 6.0rem;
+  padding-right: 3.0rem;
 }
 /* .custom-position .title-content-wrap {
   display: flex;
@@ -192,6 +191,7 @@ footer a,
 }
 
 .skills-content {
-  width: 30rem;
+  width: 25rem;
   
 }
+

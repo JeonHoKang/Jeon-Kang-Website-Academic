@@ -85,7 +85,7 @@
 
 {{ if and $block.content.title (eq $block.content.title "Publications") }}
 <body class="overflow-x-hidden">
-  <!-- <div class="w-full max-w-3xl mx-auto mb-6 grid gap-4 sm:grid-cols-3">
+  <div class="w-full max-w-3xl mx-auto mb-6 grid gap-4 sm:grid-cols-3">
       <input
         type="text"
         id="pubSearch"
@@ -97,7 +97,7 @@
         id="pubAuthor"
         placeholder="Search author."
         class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-      /> -->
+      />
       {{/* Generate unique list of years from $query */}}
       {{ $years := slice }}
       {{ range $query }}
@@ -107,7 +107,7 @@
         {{ end }}
       {{ end }}
       {{ $years = sort $years "value" "desc" }}
-      <!-- <select
+      <select
         id="pubYear"
         class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
       >
@@ -116,7 +116,7 @@
           <option value="{{ . }}">{{ . }}</option>
         {{ end }}
       </select>
-    </div> -->
+    </div>
   {{ end }}
 
 

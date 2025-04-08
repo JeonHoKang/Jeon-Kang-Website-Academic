@@ -136,12 +136,12 @@ skills:
         description: Git, CUDA, Docker
   - name: Courses
     items:
-      - name: CS 182 - Designing, Visualizing and Understanding Deep Neural Networks
+      - name: CS 182 - Designing, Visualizing and </br> Understanding Deep </br> Neural Networks
         description: 'Great course taught by Professor Sergey Levine: [Syllabus](https://cs182sp21.github.io). Spans from basic affine transform, regularization techniques. Then goes in to different architectures like CNN, RNN and Transformers. Touches on different applications like natural language processing, computer vision and imitation learning for self-driving cars and robotics.'
       - name: NN-zero-to-hero 
         description: 'Considered one of the best tutorials to neural networks taught by [Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ).'
-      - name: AME 540 - Probability and Statistics for Engineering Science
-        description: 'Course taught at USC by Professor [Assad Obeai](https://viterbi.usc.edu/directory/faculty/Oberai/Assad). Touches on introductory theories behind probability like random variables and vectors, Conditional distributions and Bayes theorem, and stocahstic processes and its applications '
+      - name: AME 540 - Probability and  </br> Statistics for Engineering Science
+        description: Course taught at USC by Professor [Assad Obeai](https://viterbi.usc.edu/directory/faculty/Oberai/Assad). Touches on introductory theories behind probability like random variables and vectors, Conditional distributions and Bayes theorem, and stocahstic processes and its applications
         # percent: 80
         # icon: code-bracket
 
