@@ -135,25 +135,25 @@ sections:
         gradient_angle: 30
 
 
-  # - block: resume-skills 
-  #   id: skills
-  #   content: 
-  #     title: Skills & courses
-  #     # title: Experience
-  #     username: admin
+  - block: resume-skills 
+    id: skills
+    content: 
+      title: Skills & courses
+      # title: Experience
+      username: admin
 
-  #   design:
-  #     css_class:  custom-position dark
-  #     columns: 2
-  #     background:
-  #       color: black
-  #       gradient_start: '#282B2C'
-  #       gradient_end: '#2c3e50'
-  #       # The gradient angle from 0-360 degrees
-  #       gradient_angle: 30
-  #     date_format z: 'January 2006'
-  #     # Education or Experience section first?
-  #     is_education_first: false
+    design:
+      css_class:  custom-position dark
+      columns: 2
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+      date_format z: 'January 2006'
+      # Education or Experience section first?
+      is_education_first: false
   
 
   # - block: resume-languages
