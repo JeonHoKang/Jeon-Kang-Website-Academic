@@ -16,7 +16,7 @@
 {{ $person := $person_page.Params }}
 {{ $is_education_first := $block.design.is_education_first | default false }}
 
-<div class="flex flex-col items-center max-w-prose mx-auto">
+
 <!--  <article class="prose prose-slate lg:prose-xl dark:prose-invert">-->
 <!--    {{ with $block.content.title }}-->
 <!--    <h2>{{ . }}</h2>-->
@@ -24,53 +24,65 @@
 <!--  </article>-->
 
 <!-- Need Gap >= 3 when flex-row due to negative margin on cols (-start-3) -->
-<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 {{ if $is_education_first }}flex-col-reverse{{end}}">
+<div class="flex flex-col items-center max-w-prose mx-auto">
+  <!-- Vertical line -->
+  <div class="flex flex-col  lg:gap-x-6 w-100 px-6 sm:px-0">
 
-{{ if $person.work }}
-<div class="w-full">
-  <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">{{ i18n "experience" | default "Experience" }}</h3>
-  <ol class="relative border-s border-gray-100 dark:border-gray-500">
-    {{ range $idx, $key := $person.work }}
-    <li class="mb-12 relative pl-8">
-        <!-- Timeline Dot -->
-        <span class="absolute left-0 top-6 flex h-4 w-4 items-center justify-center rounded-full bg-primary-500 ring-4 ring-gray-900 z-10">
-          <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-        </span>
-      
-        <!-- Card -->
-        <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
-          
-          <!-- Logo -->
-          {{ with .logo }}
-          <div class="flex-shrink-0">
-            <img src="/media/experience/{{ . }}" alt="{{ $.company_name }} logo" class="object-contain rounded-md" style="width: 92px; height: 92px;" loading="lazy">
-          </div>
-          {{ end }}
-      
-          <!-- Text -->
-          <div class="flex flex-col">
-            <h3 class="text-lg font-semibold">{{ .position }}</h3>
-            <p class="text-primary-400 font-medium">{{ .company_name }}</p>
-            <p class="text-sm text-gray-400 mt-1">
-              {{ if .date_start }}
-                {{ (time .date_start) | time.Format "Jan 2006" }} –
+        {{ if $person.work }}
+        <div class="w-full">
+          <h3 class="mb-6 text-4xl font-bold text-gray-900 dark:text-white">{{ i18n "experience" | default "Experience" }}</h3>
+              <!-- Vertical line -->
+
+            <ol class="relative border-s border-gray-200 dark:border-gray-700">  
+              {{ range $idx, $key := $person.work }}
+              <li class="mb-10 ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+                  <svg fill="currentcolor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                    <path d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z"></path>
+                  </svg>
+                </span>  
+                  <div class="flex mb-12 items-center">
+                      <!-- Card column -->
+                      <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
+                        
+                        <!-- Logo -->
+                        {{ with .logo }}
+                        <div class="flex-shrink-0">
+                          <img src="/media/experience/{{ . }}" alt="{{ $.company_name }} logo" class="object-contain rounded-md" style="width: 92px; height: 92px;" loading="lazy">
+                        </div>
+                        {{ end }}
+                  
+                        <!-- Text -->
+                        <div class="flex flex-col">
+                          <h3 class="text-lg font-semibold">{{ .position }}</h3>
+                          <p class="text-primary-400 font-medium">{{ .company_name }}</p>
+                          <p class="text-sm text-gray-400 mt-1">
+                            {{ if .date_start }}
+                              {{ (time .date_start) | time.Format "Jan 2006" }} –
+                            {{ end }}
+                            {{ if .date_end }}
+                              {{ (time .date_end) | time.Format "Jan 2006" }}
+                            {{ else }}
+                              {{ i18n "present" | default "Present" }}
+                            {{ end }}
+                            {{ with .location }} · {{ . }}{{ end }}
+                          </p>
+                          <p class="mt-3 text-sm text-gray-300">{{ .summary | $page.RenderString }}</p>
+
+                      </div>
+                    </div>
+                  
+                  </div>
+              
+              </li>
               {{ end }}
-              {{ if .date_end }}
-                {{ (time .date_end) | time.Format "Jan 2006" }}
-              {{ else }}
-                {{ i18n "present" | default "Present" }}
-              {{ end }}
-              {{ with .location }} · {{ . }}{{ end }}
-            </p>
-            <p class="mt-3 text-sm text-gray-300">{{ .summary | $page.RenderString }}</p>
-          </div>
+            </ol>
         </div>
-      </li>
-      
-      {{ end }}
-    </ol>
-</div>
-{{ end }}
-</div>
+        {{ end }}
+
+  </div>
+
 
 </div>
+
+

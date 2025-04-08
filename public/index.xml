@@ -213,6 +213,14 @@
     </item>
     
     <item>
+      <title>A Learning Framework for Enabling Robots to Autonomously Dispense Granular Material On-Demand </title>
+      <link>http://localhost:1313/publication/idetc-2024/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/idetc-2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Multi-robot task allocation under uncertainty via hindsight optimization</title>
       <link>http://localhost:1313/publication/icra-2024-n/</link>
       <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
@@ -505,7 +513,7 @@
 
 
 
-&lt;div id=&#34;chart-138465927&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-472369815&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -523,7 +531,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-138465927&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-472369815&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -890,14 +898,6 @@ Parallel 4   :         des6, after des4, 1d
       <link>http://localhost:1313/publication/idetc-2023/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/publication/idetc-2023/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>A Learning Framework for Enabling Robots to Autonomously Dispense Granular Material On-Demand </title>
-      <link>http://localhost:1313/publication/idetc-2024/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publication/idetc-2024/</guid>
       <description></description>
     </item>
     

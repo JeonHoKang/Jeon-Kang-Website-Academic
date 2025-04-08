@@ -115,6 +115,9 @@ footer a,
 }
 
 
+
+
+
 .custom-bullets ul {
     list-style-type: "🦾"; /* Unicode emoji, or '✔️', '➤', etc. */
     padding-left: 4.0rem;
@@ -125,13 +128,21 @@ footer a,
   }
   
 .blox-resume-experience .text-gray-300  {
-  width: 120% ;
+  width: 100% ;
 }
+/* 
+#experience .px-6 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+} */
 
  #news .prose a {
     color: white !important;
   }
 
+#experience .border-s {
+  border-inline-start-width: 2px;
+}
   /* Target all text inside your custom section */
 .custom-bullets,
 .custom-bullets h2, 
@@ -179,3 +190,4 @@ footer a,
 .citation-dark .article-metadata {
   color: #ffffff !important;
 }
+

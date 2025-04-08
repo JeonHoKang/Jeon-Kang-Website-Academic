@@ -98,9 +98,9 @@ work:
 
   - position:  Engineering Intern (Undergraduate)
     company_name: Versa Products
-    company_url: ''
+    company_url: 
     date_start: 2022-01-11
-    date_end: ''
+    date_end:  2022-05-01
     summary: |
 
   # - position: Backend Software Engineer

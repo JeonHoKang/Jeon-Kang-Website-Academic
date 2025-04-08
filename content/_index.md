@@ -75,6 +75,7 @@ sections:
     content:
       title: Publications
       text: ""
+      count: 10
       filters:
         folders:
           - publication

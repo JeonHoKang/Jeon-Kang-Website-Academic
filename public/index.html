@@ -66,7 +66,7 @@
 
   
     
-    <link href="/css/custom.min.2912682eac552450800a63c4c14f886d7e51014a8427f382579abcedf3f5512b.css" rel="stylesheet" />
+    <link href="/css/custom.min.293f30f2286f4bc38c0881cf646688707ec90a6a9609b8130dd1d01c1cfe5ceb.css" rel="stylesheet" />
   
 
   <script>
@@ -292,137 +292,137 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
   
   
   
   
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
   
   
@@ -1269,6 +1269,10 @@
 
 
 
+
+
+
+
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
@@ -1290,7 +1294,11 @@
 
 
   
-    
+  
+    <div>
+
+
+  
 
 
 
@@ -1354,8 +1362,13 @@
   </div>
 </div>
 
+</div>
   
-    
+  
+    <div>
+
+
+  
 
 
 
@@ -1419,8 +1432,13 @@
   </div>
 </div>
 
+</div>
   
-    
+  
+    <div>
+
+
+  
 
 
 
@@ -1484,8 +1502,13 @@
   </div>
 </div>
 
+</div>
   
-    
+  
+    <div>
+
+
+  
 
 
 
@@ -1549,6 +1572,7 @@
   </div>
 </div>
 
+</div>
   
 
     </div>
@@ -1560,6 +1584,42 @@
 
 
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('pubSearch');
+    const authorInput = document.getElementById('pubAuthor');
+    const yearInput = document.getElementById('pubYear');
+
+    if (searchInput && authorInput && yearInput) {
+      const items = document.querySelectorAll('.publication-item');
+
+      function filterItems() {
+        const query = searchInput.value.trim().toLowerCase();
+        const author = authorInput.value.trim().toLowerCase();
+        const year = yearInput.value.trim();
+
+        items.forEach(item => {
+          const title = item.dataset.title || "";
+          const summary = item.dataset.summary || "";
+          const authors = item.dataset.author || "";
+          const pubYear = item.dataset.year || "";
+
+          const matchQuery = title.includes(query) || summary.includes(query);
+          const matchAuthor = authors.includes(author);
+          const matchYear = pubYear.includes(year);
+
+          const shouldShow = matchQuery && matchAuthor && matchYear;
+          item.style.display = shouldShow ? "" : "none";
+        });
+      }
+
+      searchInput.addEventListener("input", filterItems);
+      authorInput.addEventListener("input", filterItems);
+      yearInput.addEventListener("change", filterItems);
+    }
+  });
+</script>
 
   
 
@@ -1720,6 +1780,75 @@
 
 
 
+
+
+<div class="w-full max-w-3xl mx-auto mb-6 px-6 grid gap-4 sm:grid-cols-3">
+    <input
+      type="text"
+      id="pubSearch"
+      placeholder="Search title/abstract"
+      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+    />
+    <input
+      type="text"
+      id="pubAuthor"
+      placeholder="Search author."
+      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+    />
+    
+    
+    
+      
+      
+        
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+        
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+        
+      
+    
+    
+    <select
+      id="pubYear"
+      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+    >
+      <option value="">All Years</option>
+      
+        <option value="2025">2025</option>
+      
+        <option value="2024">2024</option>
+      
+        <option value="2023">2023</option>
+      
+    </select>
+  </div>
+
+
+
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
@@ -1739,7 +1868,17 @@
 
 
   
-    
+  
+    <div class="publication-item"
+        data-title="task-context-aware diffusion policy with language guidance for multi-task disassembly"
+        data-summary="
+diffusion-based policy learning frameworks excel in learning diverse tasks and achieving high success rates. however, in manufacturing settings, success rate alone is insufficient for real-world deployment. tasks must be executed efficiently, minimizing idle time while maintaining precision. additionally, in assembly and disassembly settings, a single scene often contains multiple task goals that need to be completed—such as picking up an engine while simultaneously securing a suspension—requiring the robot to reason over multiple objectives within the same observation space. in human-robot collaboration, enabling humans to specify task preferences is crucial for flexible and intuitive interaction. in this paper, we address two key challenges : (1) improving task execution efficiency by structuring tasks into distinct sub-task modes via language, and (2) enabling human operators to select tasks using natural language commands. additionally, we introduce adaptive parameter selection framework and reliance on different sensory modalities depending on these sub-task modes. we evaluate our approach on the nist task board, a representative benchmark of real-world tasks where multiple task goals exist within the same scene. our method improves execution speed by 57\% and show 19\% improvement in task success rates. demonstration videos are available at [project website](https://rros-lab.github.io/task-aware-diffusion/)
+"
+        data-author="admin, sagar joshi, neel dhanaraj, satyandra k. gupta"
+        data-year="2025">
+  
+
+  
 
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
@@ -1832,8 +1971,17 @@
   
 </div>
 
+</div>
   
-    
+  
+    <div class="publication-item"
+        data-title="robotic compliant object prying using diffusion policy guided by vision and force observations"
+        data-summary="the growing adoption of batteries in the electric vehicle industry and various consumer products has created an urgent need for effective recycling solutions. these products often contain a mix of compliant and rigid components, making robotic disassembly a critical step toward achieving scalable recycling processes. diffusion policy has emerged as a promising approach for learning low-level skills in robotics. to effectively apply diffusion policy to contact-rich tasks, incorporating force as feedback is essential. in this paper, we apply diffusion policy with vision and force in a compliant object prying task. however, when combining low-dimensional contact force with high-dimensional image, the force information may be diluted. to address this issue, we propose a method that effectively integrates force with image data for diffusion policy observations. we validate our approach on a battery prying task that demands high precision and multi-step execution. our model achieves a 96% success rate in diverse scenarios, marking a 57% improvement over the vision-only baseline. our method also demonstrates zero-shot transfer capability to handle unseen objects and battery types. supplementary videos and implementation codes are available on our project website -  **[project website](https://rros-lab.github.io/diffusion-with-force.github.io/)**"
+        data-author="admin, sagar joshi, ruopeng huang, satyandra k. gupta"
+        data-year="2025">
+  
+
+  
 
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
@@ -1937,8 +2085,17 @@
   
 </div>
 
+</div>
   
-    
+  
+    <div class="publication-item"
+        data-title="force-conditioned diffusion policies for compliant sheet separation tasks in bimanual robotic cells"
+        data-summary="disassembly is a critical challenge in maintenance and service tasks, particularly in high-precision operations such as electric vehicle (ev) battery recycling.tasks like prying-open sealed battery covers require precise manipulation and controlled force application. in our approach we collect human demonstrations using a motion capture system, enabling the robot to learn from human-expert disassembly strategies.these demonstrations train a bimanual robotic system in which one arm exerts force with a specialized tool while the other manipulates and removes sealed components.our method builds on a diffusion-based policy and integrates real-time force sensing to adapt its actions as contact conditions change. we decompose the demonstrations into distinct sub-tasks and apply data augmentation, thereby reducing the number of demonstrations needed and mitigating potential task failures. our results show that the proposed method, even with a small dataset, achieves a high task success rate and efficiency compared to a standard diffusion technique. we demonstrate in a real-world application that the bimanual system effectively executes chiseling and peeling actions to separate bonded sheet from a substrate."
+        data-author="rishabh shukla, samrudh mude, raj talan, neel dhanaraj, admin, satyandra k. gupta"
+        data-year="2025">
+  
+
+  
 
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
@@ -2015,8 +2172,17 @@
   
 </div>
 
+</div>
   
-    
+  
+    <div class="publication-item"
+        data-title="generating and applying contingency handling procedures in human-robot teams in manufacturing applications"
+        data-summary="in manufacturing, minimizing operational delays is crucial for efficiency and resilience. this paper introduces a novel approach to recover from contingencies by using large language models. the core of our approach leverages llms to enable quick and autonomous response to unforeseen contingencies. the results demonstrate advancements in\:(1) successful recovery from potential assembly operation setbacks, through tailored procedures; (2) the creation of adaptive, reactive strategies to overcome contingency, utilizing generative models; and (3) a significant reduction in human effort and makespan."
+        data-author="admin, neel dhanaraj, siddhant wadaskar, satyandra k. gupta"
+        data-year="2024">
+  
+
+  
 
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
@@ -2096,8 +2262,17 @@
   
 </div>
 
+</div>
   
-    
+  
+    <div class="publication-item"
+        data-title="a task allocation and scheduling framework to facilitate efficient human-robot collaboration in high-mix assembly  applications"
+        data-summary="automating assembly operations effectively increase efficiency while decreasing the need for humans to perform ergonomically challenging tasks. however, full automation of these tasks is still a work in progress. leveraging the complementary strengths of humans and robots offers a solution. humans can handle tasks requiring dexterity by working in a team, while robots undertake routine, supportive roles. however, contingency situations created by task execution failures occur more frequently in high-mix applications because of the high variability in the types of tasks. work cells that enable collaboration between humans and robots are not likely to be economically viable unless contingency situations are detected and efficiently managed. in such situations, additional contingency tasks must be executed to recover from the contingency, and productively utilizing human agents can help the work cell quickly recover from contingencies. this paper presents a framework for automatically assigning and scheduling tasks to humans and robots to complete multiple assemblies while managing the computational complexity of generating optimal task plans. additionally, we present methods to generate recovery task plans that effectively resolve those contingencies automatically. in our case study, we present an approach to graphically determine the number of tasks and products to consider with limited computing time."
+        data-author="admin, neel dhanaraj, omey manyar, siddhant wadaskar, satyandra k. gupta"
+        data-year="2024">
+  
+
+  
 
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
@@ -2169,6 +2344,348 @@
   
 </div>
 
+</div>
+  
+  
+    <div class="publication-item"
+        data-title="a learning framework for enabling robots to autonomously dispense granular material on-demand "
+        data-summary="this paper presents a learning framework for enabling robots to autonomously dispense granular materials on demand. this framework enables robots to scoop and transfer the requested material amount with milligram scale accuracy. our approach is capable of handling challenging cases where the amount left in the source container is significantly less than the container volume. in such cases, robots must build piles before scooping the material to capture enough material within the scooper. we use gaussian process regression (gpr) to predict granular material behavior during scooping and pouring tasks. gpr is effective in learning the behavior of granular material with task parameters, such as robot joint angles, joint accelerations, and end-effector geometry. during task execution, we use gpr to solve the inverse problem and determine the task parameters based on the desired scooping and pouring amounts. the system performance is evaluated by showing gpr’s ability to predict scooped and poured amounts with reasonable uncertainty. we benchmark our method against the traditional approach of fine-tuning the amount via closed-loop control from the scale sensor feedback. our method shows 55.2% improvement in time taken to dispense the granular material over the benchmark approach. the proposed framework shows promising results in terms of reducing dispensing times."
+        data-author="admin, rishabh shkla, moksh mehta, satyandra k. gupta"
+        data-year="2024">
+  
+
+  
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span class="font-bold">
+      Jeon Ho Kang</span>, <span >
+      Rishabh Shkla</span>, <span >
+      Moksh Mehta</span>, <span >
+      Satyandra K. Gupta</span>
+  </span>
+  (2024).
+  <a href="/publication/idetc-2024/" class="underline">A Learning Framework for Enabling Robots to Autonomously Dispense Granular Material On-Demand </a>.
+  DETC 2024 August 25–28, 2024 Washington, DC, USA.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/idetc-2024/iDETC%202024.pdf" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/idetc-2024/cite.bib" target="_blank" data-filename="/publication/idetc-2024/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+  
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+</div>
+  
+  
+    <div class="publication-item"
+        data-title="multi-robot task allocation under uncertainty via hindsight optimization"
+        data-summary="multi-robot systems are becoming increasingly prevalent in various real-world applications, such as manufacturing and warehouse logistics. these systems face complex challenges in 1) task allocation due to factors like time-extended tasks, and agent specialization, and 2) uncertainties in task execution. potential task failures can add further contingency tasks to recover from the failure, thereby causing delays. this paper addresses the problem of multi-robot task allocation under uncertainty by proposing a hierarchical approach that decouples the problem into two levels. we use a low-level optimization formulation to find the optimal solution for a deterministic multi-robot task allocation problem with known task outcomes. the higher-level search intelligently generates more likely combinations of failures and calls the inner-level search repeatedly to find the optimal task allocation sequence, given the known outcomes. we validate our results in simulation for a manufacturing domain and demonstrate that our method can reduce the effect of potential delays from contingencies. we show that our algorithm is computationally efficient while improving average makespan compared to other baselines."
+        data-author="neel dhanaraj, admin, anirban mukherjee, heramb nemlekar, stefanos nikolaidis, satyandra k. gupta"
+        data-year="2024">
+  
+
+  
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      Neel Dhanaraj</span>, <span class="font-bold">
+      Jeon Ho Kang</span>, <span >
+      Anirban Mukherjee</span>, <span >
+      Heramb Nemlekar</span>, <span >
+      Stefanos Nikolaidis</span>, <span >
+      Satyandra K. Gupta</span>
+  </span>
+  (2024).
+  <a href="/publication/icra-2024-n/" class="underline">Multi-robot task allocation under uncertainty via hindsight optimization</a>.
+  2024 IEEE International Conference on Robotics and Automation (ICRA).
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="https://ieeexplore.ieee.org/abstract/document/10611370" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/icra-2024-n/cite.bib" target="_blank" data-filename="/publication/icra-2024-n/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+</div>
+  
+  
+    <div class="publication-item"
+        data-title="preference elicitation and incorporation for human-robot task scheduling"
+        data-summary="in this work, we address the challenge of incorporating human preferences into the task-scheduling process for human-robot teams. humans have various individual preferences that can be influenced by context and situational information. incorporating these preferences can lead to improved team performance. our main contribution is a framework that helps elicit and incorporate preferences during task scheduling. we achieve this by proposing 1) a constraint programming method to generate a range of plans, 2) an intelligent approach for selecting and presenting task schedules based on task features, and 3) a preference incorporation method that uses large language models to convert preferences into soft constraints. our results demonstrate that we can efficiently generate diverse plans for preference elicitation and incorporate them into the task-scheduling process. we evaluate our framework using an assembly-inspired case study and show how it can effectively incorporate complex and realistic preferences. our implementation can be found at github.com/rros-lab/human-robot-preference-planning."
+        data-author="neel dhanaraj, minseok jeon, admin, stefanos nikolaidis, satyandra k. gupta"
+        data-year="2024">
+  
+
+  
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      Neel Dhanaraj</span>, <span >
+      Minseok Jeon</span>, <span class="font-bold">
+      Jeon Ho Kang</span>, <span >
+      Stefanos Nikolaidis</span>, <span >
+      Satyandra K. Gupta</span>
+  </span>
+  (2024).
+  <a href="/publication/case-2024/" class="underline">Preference Elicitation and Incorporation for Human-Robot Task Scheduling</a>.
+  2024 IEEE 20th International Conference on Automation Science and Engineering (CASE).
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/case-2024/cite.bib" target="_blank" data-filename="/publication/case-2024/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+</div>
+  
+  
+    <div class="publication-item"
+        data-title="safe robot to human tool handover to support effective collaboration"
+        data-summary="robot-to-human mechanical tool handover is a common task in a human-robot collaborative assembly where humans are performing complex, high-value tasks and robots are performing supporting tasks. this paper discusses an approach to ensure the safe handover of mechanical tools to humans. we introduce a framework to enable smart robotic assistants to safely and efficiently perform robot-to-human tool handovers. our system utilizes a specialized gripper design capable of firmly grasping objects with irregular geometries. we utilize a tool end detection method so that the robot grasps the tool end and ensures that the human can safely grab the handle during handover. additionally, the system is able to detect if the tool moves during the grasping process and either restart the pickup or account for the new orientation during hand-off planning. lastly, the hand-off planning ensures the robot releases the tool at the appropriate time when the human has safely grabbed the handle. our experimental results indicate that our system can safely and effectively hand off many different types of tools. we have tested the system’s ability to handle contingencies that may occur during the handover process successfully."
+        data-author="admin, paolo limcaoco, neel dhanaraj, satyandra k. gupta"
+        data-year="2023">
+  
+
+  
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span class="font-bold">
+      Jeon Ho Kang</span>, <span >
+      Paolo Limcaoco</span>, <span >
+      Neel Dhanaraj</span>, <span >
+      Satyandra K. Gupta</span>
+  </span>
+  (2023).
+  <a href="/publication/idetc-2023/" class="underline">Safe Robot to Human Tool Handover to Support Effective Collaboration</a>.
+  In.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/idetc-2023/iDETC%202023.pdf" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/idetc-2023/cite.bib" target="_blank" data-filename="/publication/idetc-2023/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+  
+
+
+  
+  
+    
+  
+<a class="hb-attachment-link hb-attachment-small" href="https://www.youtube.com/watch?v=TKyEbTcFW5M" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m15.75 10.5l4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+  Video
+</a>
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+</div>
   
 
   </div>
@@ -2181,31 +2698,41 @@
 
 
 
-  
-  
-    
-  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('pubSearch');
+    const authorInput = document.getElementById('pubAuthor');
+    const yearInput = document.getElementById('pubYear');
 
-  
-  
-  
-  
-    
-  
+    if (searchInput && authorInput && yearInput) {
+      const items = document.querySelectorAll('.publication-item');
 
-  
+      function filterItems() {
+        const query = searchInput.value.trim().toLowerCase();
+        const author = authorInput.value.trim().toLowerCase();
+        const year = yearInput.value.trim();
 
-  <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
-    <div class="mt-10 flex justify-center">
-      <a
-        class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
-        href="/publication/">
-          <span>See all publications</span>
-        </a>
-      </div>
-  </div>
+        items.forEach(item => {
+          const title = item.dataset.title || "";
+          const summary = item.dataset.summary || "";
+          const authors = item.dataset.author || "";
+          const pubYear = item.dataset.year || "";
 
+          const matchQuery = title.includes(query) || summary.includes(query);
+          const matchAuthor = authors.includes(author);
+          const matchYear = pubYear.includes(year);
 
+          const shouldShow = matchQuery && matchAuthor && matchYear;
+          item.style.display = shouldShow ? "" : "none";
+        });
+      }
+
+      searchInput.addEventListener("input", filterItems);
+      authorInput.addEventListener("input", filterItems);
+      yearInput.addEventListener("change", filterItems);
+    }
+  });
+</script>
 
   
 
@@ -2366,6 +2893,10 @@
 
 
 
+
+
+
+
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
@@ -2387,7 +2918,11 @@
 
 
   
-    
+  
+    <div>
+
+
+  
 
 
 
@@ -2428,8 +2963,13 @@
   </div>
 </div>
 
+</div>
   
-    
+  
+    <div>
+
+
+  
 
 
 
@@ -2470,8 +3010,13 @@
   </div>
 </div>
 
+</div>
   
-    
+  
+    <div>
+
+
+  
 
 
 
@@ -2512,6 +3057,7 @@
   </div>
 </div>
 
+</div>
   
 
     </div>
@@ -2523,6 +3069,42 @@
 
 
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('pubSearch');
+    const authorInput = document.getElementById('pubAuthor');
+    const yearInput = document.getElementById('pubYear');
+
+    if (searchInput && authorInput && yearInput) {
+      const items = document.querySelectorAll('.publication-item');
+
+      function filterItems() {
+        const query = searchInput.value.trim().toLowerCase();
+        const author = authorInput.value.trim().toLowerCase();
+        const year = yearInput.value.trim();
+
+        items.forEach(item => {
+          const title = item.dataset.title || "";
+          const summary = item.dataset.summary || "";
+          const authors = item.dataset.author || "";
+          const pubYear = item.dataset.year || "";
+
+          const matchQuery = title.includes(query) || summary.includes(query);
+          const matchAuthor = authors.includes(author);
+          const matchYear = pubYear.includes(year);
+
+          const shouldShow = matchQuery && matchAuthor && matchYear;
+          item.style.display = shouldShow ? "" : "none";
+        });
+      }
+
+      searchInput.addEventListener("input", filterItems);
+      authorInput.addEventListener("input", filterItems);
+      yearInput.addEventListener("change", filterItems);
+    }
+  });
+</script>
 
   
 
@@ -2644,126 +3226,147 @@
 
 
 
+
+
+
+
+
+
 <div class="flex flex-col items-center max-w-prose mx-auto">
+  
+  <div class="flex flex-col  lg:gap-x-6 w-100 px-6 sm:px-0">
 
-
-
-
-
-<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 ">
-
-
-<div class="w-full">
-  <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Experience</h3>
-  <ol class="relative border-s border-gray-100 dark:border-gray-500">
-    
-    <li class="mb-12 relative pl-8">
         
-        <span class="absolute left-0 top-6 flex h-4 w-4 items-center justify-center rounded-full bg-primary-500 ring-4 ring-gray-900 z-10">
-          <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-        </span>
-      
-        
-        <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
-          
-          
-          
-          <div class="flex-shrink-0">
-            <img src="/media/experience/HRIlogo.svg" alt=" logo" class="object-contain rounded-md" style="width: 92px; height: 92px;" loading="lazy">
-          </div>
-          
-      
-          
-          <div class="flex flex-col">
-            <h3 class="text-lg font-semibold">Research Scientist Intern</h3>
-            <p class="text-primary-400 font-medium">Honda Research Institute</p>
-            <p class="text-sm text-gray-400 mt-1">
+        <div class="w-full">
+          <h3 class="mb-6 text-4xl font-bold text-gray-900 dark:text-white">Experience</h3>
               
-                May 2025 –
+
+            <ol class="relative border-s border-gray-200 dark:border-gray-700">  
               
+              <li class="mb-10 ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+                  <svg fill="currentcolor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                    <path d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z"></path>
+                  </svg>
+                </span>  
+                  <div class="flex mb-12 items-center">
+                      
+                      <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
+                        
+                        
+                        
+                        <div class="flex-shrink-0">
+                          <img src="/media/experience/HRIlogo.svg" alt=" logo" class="object-contain rounded-md" style="width: 92px; height: 92px;" loading="lazy">
+                        </div>
+                        
+                  
+                        
+                        <div class="flex flex-col">
+                          <h3 class="text-lg font-semibold">Research Scientist Intern</h3>
+                          <p class="text-primary-400 font-medium">Honda Research Institute</p>
+                          <p class="text-sm text-gray-400 mt-1">
+                            
+                              May 2025 –
+                            
+                            
+                              Aug 2025
+                            
+                            
+                          </p>
+                          <p class="mt-3 text-sm text-gray-300">Researh on vision language action models applied on dexterous manipulations tasks</p>
+
+                      </div>
+                    </div>
+                  
+                  </div>
               
-                Aug 2025
+              </li>
               
+              <li class="mb-10 ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+                  <svg fill="currentcolor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                    <path d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z"></path>
+                  </svg>
+                </span>  
+                  <div class="flex mb-12 items-center">
+                      
+                      <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
+                        
+                        
+                        
+                        <div class="flex-shrink-0">
+                          <img src="/media/experience/usc.svg" alt=" logo" class="object-contain rounded-md" style="width: 92px; height: 92px;" loading="lazy">
+                        </div>
+                        
+                  
+                        
+                        <div class="flex flex-col">
+                          <h3 class="text-lg font-semibold">Graduate Researcher</h3>
+                          <p class="text-primary-400 font-medium">Center for Advanced Manufacturing</p>
+                          <p class="text-sm text-gray-400 mt-1">
+                            
+                              Jan 2022 –
+                            
+                            
+                              Present
+                            
+                            
+                          </p>
+                          <p class="mt-3 text-sm text-gray-300">Conduct research on decision making for robot manipulation and task planning for manufacturing and publish to top-tier journals and confereneces.</p>
+
+                      </div>
+                    </div>
+                  
+                  </div>
               
-            </p>
-            <p class="mt-3 text-sm text-gray-300">Researh on vision language action models applied on dexterous manipulations tasks</p>
-          </div>
+              </li>
+              
+              <li class="mb-10 ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+                  <svg fill="currentcolor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                    <path d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z"></path>
+                  </svg>
+                </span>  
+                  <div class="flex mb-12 items-center">
+                      
+                      <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
+                        
+                        
+                        
+                  
+                        
+                        <div class="flex flex-col">
+                          <h3 class="text-lg font-semibold">Engineering Intern (Undergraduate)</h3>
+                          <p class="text-primary-400 font-medium">Versa Products</p>
+                          <p class="text-sm text-gray-400 mt-1">
+                            
+                              Jan 2022 –
+                            
+                            
+                              May 2022
+                            
+                            
+                          </p>
+                          <p class="mt-3 text-sm text-gray-300"></p>
+
+                      </div>
+                    </div>
+                  
+                  </div>
+              
+              </li>
+              
+            </ol>
         </div>
-      </li>
-      
-      
-    <li class="mb-12 relative pl-8">
         
-        <span class="absolute left-0 top-6 flex h-4 w-4 items-center justify-center rounded-full bg-primary-500 ring-4 ring-gray-900 z-10">
-          <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-        </span>
-      
-        
-        <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
-          
-          
-          
-          <div class="flex-shrink-0">
-            <img src="/media/experience/usc.svg" alt=" logo" class="object-contain rounded-md" style="width: 92px; height: 92px;" loading="lazy">
-          </div>
-          
-      
-          
-          <div class="flex flex-col">
-            <h3 class="text-lg font-semibold">Graduate Researcher</h3>
-            <p class="text-primary-400 font-medium">Center for Advanced Manufacturing</p>
-            <p class="text-sm text-gray-400 mt-1">
-              
-                Jan 2022 –
-              
-              
-                Present
-              
-              
-            </p>
-            <p class="mt-3 text-sm text-gray-300">Conduct research on decision making for robot manipulation and task planning for manufacturing and publish to top-tier journals and confereneces.</p>
-          </div>
-        </div>
-      </li>
-      
-      
-    <li class="mb-12 relative pl-8">
-        
-        <span class="absolute left-0 top-6 flex h-4 w-4 items-center justify-center rounded-full bg-primary-500 ring-4 ring-gray-900 z-10">
-          <div class="w-2.5 h-2.5 bg-white rounded-full"></div>
-        </span>
-      
-        
-        <div class="bg-gray-600 p-6 rounded-2xl shadow-xl w-full text-gray-100 flex items-start gap-4">
-          
-          
-          
-      
-          
-          <div class="flex flex-col">
-            <h3 class="text-lg font-semibold">Engineering Intern (Undergraduate)</h3>
-            <p class="text-primary-400 font-medium">Versa Products</p>
-            <p class="text-sm text-gray-400 mt-1">
-              
-                Jan 2022 –
-              
-              
-                Present
-              
-              
-            </p>
-            <p class="mt-3 text-sm text-gray-300"></p>
-          </div>
-        </div>
-      </li>
-      
-      
-    </ol>
+
+  </div>
+
+
 </div>
 
-</div>
 
-</div>
+
 
   
 

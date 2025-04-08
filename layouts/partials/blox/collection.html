@@ -82,6 +82,43 @@
 {{ $columns := $block.design.columns | default "2" }}
 
 {{ if $block.content.title }}
+
+{{ if and $block.content.title (eq $block.content.title "Publications") }}
+<div class="w-full max-w-3xl mx-auto mb-6 px-6 grid gap-4 sm:grid-cols-3">
+    <input
+      type="text"
+      id="pubSearch"
+      placeholder="Search title/abstract"
+      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+    />
+    <input
+      type="text"
+      id="pubAuthor"
+      placeholder="Search author."
+      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+    />
+    {{/* Generate unique list of years from $query */}}
+    {{ $years := slice }}
+    {{ range $query }}
+      {{ $year := .Date.Format "2006" }}
+      {{ if not (in $years $year) }}
+        {{ $years = $years | append $year }}
+      {{ end }}
+    {{ end }}
+    {{ $years = sort $years "value" "desc" }}
+    <select
+      id="pubYear"
+      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+    >
+      <option value="">All Years</option>
+      {{ range $years }}
+        <option value="{{ . }}">{{ . }}</option>
+      {{ end }}
+    </select>
+  </div>
+{{ end }}
+
+
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
@@ -98,7 +135,18 @@
   {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
 
   {{ range $index, $item := $query }}
-    {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index "config" $config) }}
+  {{ if eq $block.content.title "Publications" }}
+    <div class="publication-item"
+        data-title="{{ $item.Title | lower }}"
+        data-summary="{{ $item.Params.abstract | lower }}"
+        data-author="{{ delimit (slice (delimit $item.Params.authors ", ")) "," | lower }}"
+        data-year="{{ $item.Date.Format "2006" }}">
+  {{ else }}
+    <div>
+{{ end }}
+
+  {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index "config" $config) }}
+</div>
   {{end}}
 
   {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
@@ -142,3 +190,39 @@
   </div>
 
 {{ end }}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('pubSearch');
+    const authorInput = document.getElementById('pubAuthor');
+    const yearInput = document.getElementById('pubYear');
+
+    if (searchInput && authorInput && yearInput) {
+      const items = document.querySelectorAll('.publication-item');
+
+      function filterItems() {
+        const query = searchInput.value.trim().toLowerCase();
+        const author = authorInput.value.trim().toLowerCase();
+        const year = yearInput.value.trim();
+
+        items.forEach(item => {
+          const title = item.dataset.title || "";
+          const summary = item.dataset.summary || "";
+          const authors = item.dataset.author || "";
+          const pubYear = item.dataset.year || "";
+
+          const matchQuery = title.includes(query) || summary.includes(query);
+          const matchAuthor = authors.includes(author);
+          const matchYear = pubYear.includes(year);
+
+          const shouldShow = matchQuery && matchAuthor && matchYear;
+          item.style.display = shouldShow ? "" : "none";
+        });
+      }
+
+      searchInput.addEventListener("input", filterItems);
+      authorInput.addEventListener("input", filterItems);
+      yearInput.addEventListener("change", filterItems);
+    }
+  });
+</script>
