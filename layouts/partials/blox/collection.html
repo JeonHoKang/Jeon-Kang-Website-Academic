@@ -84,112 +84,114 @@
 {{ if $block.content.title }}
 
 {{ if and $block.content.title (eq $block.content.title "Publications") }}
-<div class="w-full max-w-3xl mx-auto mb-6 px-6 grid gap-4 sm:grid-cols-3">
-    <input
-      type="text"
-      id="pubSearch"
-      placeholder="Search title/abstract"
-      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-    />
-    <input
-      type="text"
-      id="pubAuthor"
-      placeholder="Search author."
-      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-    />
-    {{/* Generate unique list of years from $query */}}
-    {{ $years := slice }}
-    {{ range $query }}
-      {{ $year := .Date.Format "2006" }}
-      {{ if not (in $years $year) }}
-        {{ $years = $years | append $year }}
+<body class="overflow-x-hidden">
+  <!-- <div class="w-full max-w-3xl mx-auto mb-6 grid gap-4 sm:grid-cols-3">
+      <input
+        type="text"
+        id="pubSearch"
+        placeholder="Search title/abstract"
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      />
+      <input
+        type="text"
+        id="pubAuthor"
+        placeholder="Search author."
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      /> -->
+      {{/* Generate unique list of years from $query */}}
+      {{ $years := slice }}
+      {{ range $query }}
+        {{ $year := .Date.Format "2006" }}
+        {{ if not (in $years $year) }}
+          {{ $years = $years | append $year }}
+        {{ end }}
       {{ end }}
+      {{ $years = sort $years "value" "desc" }}
+      <!-- <select
+        id="pubYear"
+        class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+      >
+        <option value="">All Years</option>
+        {{ range $years }}
+          <option value="{{ . }}">{{ . }}</option>
+        {{ end }}
+      </select>
+    </div> -->
+  {{ end }}
+
+
+  <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+    <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+      {{ $block.content.title | emojify | $page.RenderString }}
+    </div>
+
+    {{ with $block.content.text }}<p>{{ . | emojify | $page.RenderString }}</p>{{ end }}
+  </div>
+  {{ end }}
+
+  <div class="flex flex-col items-center px-6">
+
+    {{ $config := dict "columns" ($block.design.columns | default 2) "len" (len $query) "fill_image" ($block.design.fill_image | default true) }}
+    {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
+
+    {{ range $index, $item := $query }}
+    {{ if eq $block.content.title "Publications" }}
+      <div class="publication-item"
+          data-title="{{ $item.Title | lower }}"
+          data-summary="{{ $item.Params.abstract | lower }}"
+          data-author="{{ delimit (slice (delimit $item.Params.authors ", ")) "," | lower }}"
+          data-year="{{ $item.Date.Format "2006" }}">
+    {{ else }}
+      <div>
+  {{ end }}
+
+    {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index "config" $config) }}
+  </div>
+    {{end}}
+
+    {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
+
+  </div>
+
+  {{/* Archive link */}}
+  {{ $show_archive_link := $block.content.archive.enable | default (gt $count $items_count) }}
+  {{ if $show_archive_link | and $archive_page }}
+
+    {{ $archive_link := "" }}
+    {{ if $block.content.archive.link }}
+      {{ $archive_link = $block.content.archive.link | relLangURL }}
+    {{ else }}
+      {{ $archive_link = $archive_page.RelPermalink }}
     {{ end }}
-    {{ $years = sort $years "value" "desc" }}
-    <select
-      id="pubYear"
-      class="w-full p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-    >
-      <option value="">All Years</option>
-      {{ range $years }}
-        <option value="{{ . }}">{{ . }}</option>
-      {{ end }}
-    </select>
-  </div>
-{{ end }}
 
+    {{/* Localisation */}}
+    {{ $items_type := $archive_page.Type }}
+    {{ $i18n := "" }}
+    {{ if eq $items_type "blog" }}
+      {{ $i18n = "more_posts" }}
+    {{ else if eq $items_type "event" }}
+      {{ $i18n = "more_talks" }}
+    {{ else if eq $items_type "publication" }}
+      {{ $i18n = "more_publications" }}
+    {{ else }}
+      {{ $i18n = "more_pages" }}
+    {{ end }}
 
-<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+    {{ $archive_text := $block.content.archive.text | default (i18n $i18n) | default "See all" }}
 
-  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-    {{ $block.content.title | emojify | $page.RenderString }}
-  </div>
+    <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
+      <div class="mt-10 flex justify-center">
+        <a
+          class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+          href="{{ $archive_link }}">
+            <span>{{ $archive_text | emojify }}</span>
+          </a>
+        </div>
+    </div>
 
-  {{ with $block.content.text }}<p>{{ . | emojify | $page.RenderString }}</p>{{ end }}
-</div>
-{{ end }}
-
-<div class="flex flex-col items-center px-6">
-
-  {{ $config := dict "columns" ($block.design.columns | default 2) "len" (len $query) "fill_image" ($block.design.fill_image | default true) }}
-  {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
-
-  {{ range $index, $item := $query }}
-  {{ if eq $block.content.title "Publications" }}
-    <div class="publication-item"
-        data-title="{{ $item.Title | lower }}"
-        data-summary="{{ $item.Params.abstract | lower }}"
-        data-author="{{ delimit (slice (delimit $item.Params.authors ", ")) "," | lower }}"
-        data-year="{{ $item.Date.Format "2006" }}">
-  {{ else }}
-    <div>
-{{ end }}
-
-  {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index "config" $config) }}
-</div>
-  {{end}}
-
-  {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
-
-</div>
-
-{{/* Archive link */}}
-{{ $show_archive_link := $block.content.archive.enable | default (gt $count $items_count) }}
-{{ if $show_archive_link | and $archive_page }}
-
-  {{ $archive_link := "" }}
-  {{ if $block.content.archive.link }}
-    {{ $archive_link = $block.content.archive.link | relLangURL }}
-  {{ else }}
-    {{ $archive_link = $archive_page.RelPermalink }}
   {{ end }}
-
-  {{/* Localisation */}}
-  {{ $items_type := $archive_page.Type }}
-  {{ $i18n := "" }}
-  {{ if eq $items_type "blog" }}
-    {{ $i18n = "more_posts" }}
-  {{ else if eq $items_type "event" }}
-    {{ $i18n = "more_talks" }}
-  {{ else if eq $items_type "publication" }}
-    {{ $i18n = "more_publications" }}
-  {{ else }}
-    {{ $i18n = "more_pages" }}
-  {{ end }}
-
-  {{ $archive_text := $block.content.archive.text | default (i18n $i18n) | default "See all" }}
-
-  <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
-    <div class="mt-10 flex justify-center">
-      <a
-        class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
-        href="{{ $archive_link }}">
-          <span>{{ $archive_text | emojify }}</span>
-        </a>
-      </div>
-  </div>
-
-{{ end }}
+</body>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
