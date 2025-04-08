@@ -16,7 +16,7 @@ main:
   - name: Projects
     url: /#projects
     weight: 40
-  - name: Experiences
+  - name: Experience
     url: /#experience
     weight: 50
   - name: Accomplishments
@@ -25,7 +25,7 @@ main:
  # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
   - name: CV
-    url: uploads/CV2_JeonHoKang_Web.pdf
+    url: /uploads/CV2_Web_JeonHoKang.pdf
     weight: 70
 
   # - name: News

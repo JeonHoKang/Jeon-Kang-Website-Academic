@@ -18,7 +18,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/CV2_JeonhoKang_Web.pdf
+        url: /uploads/CV2_Web_JeonHoKang.pdf
     design:
       css_class: dark main
       background:
@@ -29,6 +29,7 @@ sections:
         gradient_angle: 30
         # text:
         #   size: 4em
+
 
   - block: markdown
     id: news
@@ -70,45 +71,8 @@ sections:
         gradient_end: '#2c3e50'
         # The gradient angle from 0-360 degrees
         gradient_angle: 30
-  - block: collection
-    id: publications
-    content:
-      title: Publications
-      text: ""
-      count: 10
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
-      css_class: dark citation-dark
-      background:
-        color: black
-        gradient_start: '#282B2C'
-        gradient_end: '#2c3e50'
-        # The gradient angle from 0-360 degrees
-        gradient_angle: 30
-  - block: collection
-    id: projects
-    content:
-      title: Projects
-      filters:
-        folders:
-          - project
-        
-    design:
-      view: article-grid
-      columns: 3
-      css_class: dark
-      background:
-        color: black
-        gradient_start: '#282B2C'
-        gradient_end: '#2c3e50'
-        # The gradient angle from 0-360 degrees
-        gradient_angle: 30
 
-
+  
   - block: resume-experience 
     id: experience
     content: 
@@ -129,10 +93,68 @@ sections:
       # Education or Experience section first?
       is_education_first: false
       
-  # - block: resume-skills
-  #   content:
-  #     title: Skills
-  #     username: admin
+      
+  - block: collection
+    id: publications
+    content:
+      title: Publications
+      text: ""
+      count: 10
+      filters:
+        folders:
+          - publication
+        exclude_featured: false
+    design:
+      view: citation
+      css_class: dark citation-dark
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+
+  
+  - block: collection
+    id: projects
+    content:
+      title: Projects
+      filters:
+        folders:
+          - project
+        
+    design:
+      view: article-grid
+      columns: 3
+      css_class: dark
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+
+
+  - block: resume-skills 
+    id: skills
+    content: 
+      title: Skills & courses
+      # title: Experience
+      username: admin
+
+    design:
+      css_class:  custom-position dark
+      columns: 2
+      background:
+        color: black
+        gradient_start: '#282B2C'
+        gradient_end: '#2c3e50'
+        # The gradient angle from 0-360 degrees
+        gradient_angle: 30
+      date_format z: 'January 2006'
+      # Education or Experience section first?
+      is_education_first: false
+  
 
   # - block: resume-languages
   #   content:
@@ -155,5 +177,6 @@ sections:
         gradient_angle: 30
         text:
           size: 1.5em
+
 
 ---

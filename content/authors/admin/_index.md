@@ -117,18 +117,34 @@ work:
 skills:
   - name: Technical Skills
     items:
-      - name: Python
-        description: 'Proficient in Pytorch and TensorFlow for Deep Learning Applications'
+      - name: Programming
+        description: 'C/C++, Python, Linux'
         # percent: 80
         # icon: code-bracket
-      - name: ROS/ROS2
-        description: 'Full-stack robotics development from sensor feedback to motion planning'
+      - name: Libraries
+        description: Pytorch, TensorFlow, MoveIt, ROS/ROS2,</br> OpenCV, Open3D
         # percent: 100
         # icon: chart-bar
-      - name: C/C++
-        # description: ''
+      - name: Simulation Software
+        description: Isaac Sim, Mujoco, Webots, Gazebo
+        # description: 
         # percent: 40
         # icon: circle-stack
+      - name: Robots
+        description: Kuka, ABB, Yasakawa, UR
+      - name: Developer Tools
+        description: Git, CUDA, Docker
+  - name: Courses
+    items:
+      - name: CS 182 - Designing, Visualizing and Understanding Deep Neural Networks
+        description: 'Great course taught by Professor Sergey Levine: [Syllabus](https://cs182sp21.github.io). Spans from basic affine transform, regularization techniques. Then goes in to different architectures like CNN, RNN and Transformers. Touches on different applications like natural language processing, computer vision and imitation learning for self-driving cars and robotics.'
+      - name: NN-zero-to-hero 
+        description: 'Considered one of the best tutorials to neural networks taught by [Andrej Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ).'
+      - name: AME 540 - Probability and Statistics for Engineering Science
+        description: 'Course taught at USC by Professor [Assad Obeai](https://viterbi.usc.edu/directory/faculty/Oberai/Assad). Touches on introductory theories behind probability like random variables and vectors, Conditional distributions and Bayes theorem, and stocahstic processes and its applications '
+        # percent: 80
+        # icon: code-bracket
+
   # - name: Hobbies
   #   color: '#eeac02'
   #   color_border: '#f0bf23'
@@ -179,4 +195,10 @@ awards:
 
 ---
 
-My research centers on leveraging recent advancements in deep learning and multi-sensory perception to improve flexibility in robot learning. I am particularly interested in decision-making for task execution driven by diverse sensory inputs such as force, tactile feedback, and language. I have authored three first-author publications — including papers in ICRA 2024 and RA-L, with one currently under review for CASE 2025. Additionally, I have contributed to three ASME conference papers (MSEC and IDETC), with our MSEC 2024 paper receiving the Best Conference Paper Award (2nd place).
+I am a Ph.D. student in Robotics at the University of California, fortunate to be advised by [Professor S.K. Gupta](https://sites.usc.edu/skgupta/). I am a member of the [RROS Lab](https://sites.usc.edu/rros/), where we focus on smart manufacturing systems and skill learning for complex manufacturing tasks.
+
+My research centers on leveraging probabilistic models and deep learning to enable multi-sensory perception and manipulation skills, with the goal of enhancing flexibility and adaptability in robot learning. I am particularly interested in developing intelligent ways to integrate diverse sensory feedback — including force, tactile inputs, and language — into robotic systems.
+
+I have authored three first-author publications, including papers in ICRA and RA-L, with one currently under review for CASE 2025. Additionally, I have contributed to three ASME conference papers (MSEC and IDETC), with our MSEC 2024 paper receiving the Best Conference Paper Award (2nd place). I have also served as a reviewer for multiple conferences, including ICRA 2025, IROS 2025, and CASE 2025.
+
+
