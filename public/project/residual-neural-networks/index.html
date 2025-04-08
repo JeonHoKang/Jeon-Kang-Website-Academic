@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: April 7, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: April 8, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -41,7 +41,9 @@
   
     
   
-  <meta name="description" content="Leveraging CNN and RNN architectures" />
+  <meta name="description" content="GRU for name classification More insights and description to come!! :)
+Code implementation can be found here - Github
+" />
 
   
   <link rel="alternate" hreflang="en-us" href="http://localhost:1313/project/residual-neural-networks/" />
@@ -66,7 +68,7 @@
 
   
     
-    <link href="/css/custom.min.d0787cee9c4a96848e795b5ae57ddff200e4d62ae35e87fbb51548a8b85ccf55.css" rel="stylesheet" />
+    <link href="/css/custom.min.293f30f2286f4bc38c0881cf646688707ec90a6a9609b8130dd1d01c1cfe5ceb.css" rel="stylesheet" />
   
 
   <script>
@@ -175,7 +177,6 @@
   
   
     
-    
   
   
 
@@ -184,7 +185,7 @@
     
     
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
     <meta property="twitter:site" content="@GetResearchDev" />
     <meta property="twitter:creator" content="@GetResearchDev" />
@@ -192,11 +193,18 @@
   <meta property="og:site_name" content="Jeon Ho Kang" />
   <meta property="og:url" content="http://localhost:1313/project/residual-neural-networks/" />
   <meta property="og:title" content="Residual Neural Networks | Jeon Ho Kang" />
-  <meta property="og:description" content="Leveraging CNN and RNN architectures" /><meta property="og:image" content="http://localhost:1313/media/icon_hu_a837b1033d1a05be.png" />
-    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu_a837b1033d1a05be.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="GRU for name classification
+More insights and description to come!! :)
+Code implementation can be found here - Github" /><meta property="og:image" content="http://localhost:1313/project/residual-neural-networks/featured.png" />
+    <meta property="twitter:image" content="http://localhost:1313/project/residual-neural-networks/featured.png" /><meta property="og:locale" content="en-us" />
   
     
+      <meta
+        property="article:published_time"
+        content="2025-04-01T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2025-04-01T00:00:00&#43;00:00">
   
 
   
@@ -222,8 +230,12 @@
   },
   "headline": "Residual Neural Networks",
   
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "image": [
+    "http://localhost:1313/project/residual-neural-networks/featured.png"
+  ],
+  
+  "datePublished": "2025-04-01T00:00:00Z",
+  "dateModified": "2025-04-01T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -238,7 +250,7 @@
       "url": "http://localhost:1313/media/icon_hu_da9f9bbea425b01f.png"
     }
   },
-  "description": "\u003ch3 id=\"leveraging-cnn-and-rnn-architectures\"\u003eLeveraging CNN and RNN architectures\u003c/h3\u003e"
+  "description": "\u003ch4 id=\"gru-for-name-classification\"\u003eGRU for name classification\u003c/h4\u003e\n\u003cp\u003eMore insights and description to come!! :)\u003c/p\u003e\n\u003cp\u003eCode implementation can be found here - \u003ca href='https://github.com/JeonHoKang/Country-name-Classification-usign-RNN'\u003eGithub\u003c/a\u003e\u003c/p\u003e"
 }
 </script>
 
@@ -324,133 +336,6 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
   
   
   
@@ -458,6 +343,134 @@
   
   
   
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
   
   
@@ -707,6 +720,59 @@
     <ul class="flex flex-col gap-1 lg:hidden">
       
       
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/"
+    
+  >Projects
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/project/residual-neural-networks/"
+    
+  >Residual Neural Networks
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#"
+                class="hb-docs-link"
+              ></a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/convolutional-neural-networks/"
+    
+  >Convolutional Neural Networks
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/deep-neural-networks/"
+    
+  >Deep Neural Networks
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/3d-vision/"
+    
+  >Pointcloud-based Pick and Place
+    </a>
+              
+            </li></ul>
+      </div></li>
         <li class=""><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
@@ -760,6 +826,14 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/idetc-2024/"
+    
+  >A Learning Framework for Enabling Robots to Autonomously Dispense Granular Material On-Demand 
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/publication/icra-2024-n/"
     
   >Multi-robot task allocation under uncertainty via hindsight optimization
@@ -779,14 +853,6 @@
     href="/publication/idetc-2023/"
     
   >Safe Robot to Human Tool Handover to Support Effective Collaboration
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/publication/idetc-2024/"
-    
-  >A Learning Framework for Enabling Robots to Autonomously Dispense Granular Material On-Demand 
     </a>
               
             </li></ul>
@@ -850,51 +916,6 @@
     
   >News
     </a></li>
-        <li class="open"><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/"
-    
-  >Projects
-        <span data-hb-sidebar-toggle>
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
-        </span>
-    </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/convolutional-neural-networks/"
-    
-  >Convolutional Neural Networks
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/project/deep-neural-networks/"
-    
-  >Deep Neural Networks
-    </a>
-              
-            </li><li class="flex flex-col open"><a
-    class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
-    href="/project/residual-neural-networks/"
-    
-  >Residual Neural Networks
-    </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#"
-                class="hb-docs-link"
-              ></a>
-            </li>
-          </ul>
-  
-              
-            </li></ul>
-      </div></li>
     </ul>
 
     <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
@@ -917,7 +938,7 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#leveraging-cnn-and-rnn-architectures">Leveraging CNN and RNN architectures</a>
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#gru-for-name-classification">GRU for name classification</a>
       </li></ul>
 
   
@@ -953,7 +974,7 @@
       <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Residual Neural Networks</h1>
 
       <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Apr 1, 2025</span><span class="mx-1">·</span>
         
           
           
@@ -990,16 +1011,41 @@
       
       
       
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="article-header article-container featured-image-wrapper mt-4 mb-16" style="max-width: 720px; max-height: 225px;">
+        <div style="position: relative">
+          <img src="/project/residual-neural-networks/featured_hu_be06c433bb8b80e3.webp" width="720" height="225" alt="" class="featured-image">
+          <span class="article-header-caption">Image credit: <a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/" target="_blank" rel="noopener"><strong>Andrej Karpathy</strong></a></span>
+        </div>
+      </div>
+      
 
       
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <h3 id="leveraging-cnn-and-rnn-architectures">Leveraging CNN and RNN architectures</h3>
+        <h4 id="gru-for-name-classification">GRU for name classification</h4>
+<p>More insights and description to come!! :)</p>
+<p>Code implementation can be found here - <a href='https://github.com/JeonHoKang/Country-name-Classification-usign-RNN'>Github</a></p> 
 
       </div>
 
-      <div class="mt-16"></div>
+      
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-04-01T00:00:00.000Z">
+    <span>Last updated on</span>
+    Apr 1, 2025</time>
 
       <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
         
@@ -1251,24 +1297,25 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/project/deep-neural-networks/">
-          <span
-            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/project/convolutional-neural-networks/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Deep Neural Networks</span>
+            >Convolutional Neural Networks</span
+            >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Jan 1, 0001
+                Dec 11, 2024
               
             </span>
           </span>
+          <span
+            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline">&rarr;</span></span>
         </a>
-      
-    </div>
-    <div class="">
       
     </div>
   </div>

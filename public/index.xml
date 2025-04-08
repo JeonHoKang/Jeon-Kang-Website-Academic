@@ -13,6 +13,17 @@
     </image>
     
     <item>
+      <title>Residual Neural Networks</title>
+      <link>http://localhost:1313/project/residual-neural-networks/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/residual-neural-networks/</guid>
+      <description>&lt;h4 id=&#34;gru-for-name-classification&#34;&gt;GRU for name classification&lt;/h4&gt;
+&lt;p&gt;More insights and description to come!! :)&lt;/p&gt;
+&lt;p&gt;Code implementation can be found here - &lt;a href=&#39;https://github.com/JeonHoKang/Country-name-Classification-usign-RNN&#39;&gt;Github&lt;/a&gt;&lt;/p&gt; 
+</description>
+    </item>
+    
+    <item>
       <title>Task-Context-Aware Diffusion Policy with Language Guidance for Multi-task Disassembly</title>
       <link>http://localhost:1313/publication/case-2025/</link>
       <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
@@ -129,6 +140,17 @@
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.&lt;/span&gt;
 &lt;/div&gt; --&gt;
 &lt;!-- Add the publication&#39;s **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Convolutional Neural Networks</title>
+      <link>http://localhost:1313/project/convolutional-neural-networks/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/convolutional-neural-networks/</guid>
+      <description>&lt;h4 id=&#34;u-net-archiecture-for-image-segmentation&#34;&gt;U-net archiecture for image segmentation&lt;/h4&gt;
+&lt;p&gt;More insights and description to come!! :)&lt;/p&gt;
+&lt;p&gt;Code implementation can be found here - &lt;a href=&#39;https://github.com/JeonHoKang/Image-Segmentation-with-Unet&#39;&gt;Github&lt;/a&gt;&lt;/p&gt; 
 </description>
     </item>
     
@@ -297,6 +319,15 @@
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.&lt;/span&gt;
 &lt;/div&gt; --&gt;
 &lt;!-- Add the publication&#39;s **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deep Neural Networks</title>
+      <link>http://localhost:1313/project/deep-neural-networks/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/deep-neural-networks/</guid>
+      <description>&lt;h3 id=&#34;training-neural-network-from-scratch&#34;&gt;Training neural network from scratch&lt;/h3&gt;
 </description>
     </item>
     
@@ -513,7 +544,7 @@
 
 
 
-&lt;div id=&#34;chart-472369815&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-293641857&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -531,7 +562,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-472369815&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-293641857&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -902,20 +933,17 @@ Parallel 4   :         des6, after des4, 1d
     </item>
     
     <item>
-      <title>Convolutional Neural Networks</title>
-      <link>http://localhost:1313/project/convolutional-neural-networks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/convolutional-neural-networks/</guid>
-      <description>&lt;h3 id=&#34;leveraging-cnn-and-rnn-architectures&#34;&gt;Leveraging CNN and RNN architectures&lt;/h3&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deep Neural Networks</title>
-      <link>http://localhost:1313/project/deep-neural-networks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/deep-neural-networks/</guid>
-      <description>&lt;h3 id=&#34;leveraging-cnn-and-rnn-architectures&#34;&gt;Leveraging CNN and RNN architectures&lt;/h3&gt;
+      <title>Pointcloud-based Pick and Place</title>
+      <link>http://localhost:1313/project/3d-vision/</link>
+      <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/3d-vision/</guid>
+      <description>&lt;h4 id=&#34;point-cloud-based-pose-estimation-and-segmentation-for-pick-and-place-task&#34;&gt;Point cloud-based pose-estimation and segmentation for Pick and Place task&lt;/h4&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; 
+  src=&#34;https://www.youtube.com/embed/E5XSxvMNhlk&#34; 
+  title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; 
+  allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; 
+  allowfullscreen&gt;
+&lt;/iframe&gt;
 </description>
     </item>
     
@@ -925,15 +953,6 @@ Parallel 4   :         des6, after des4, 1d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/news/</guid>
       <description>&lt;h1 id=&#34;markdown&#34;&gt;Markdown&lt;/h1&gt;</description>
-    </item>
-    
-    <item>
-      <title>Residual Neural Networks</title>
-      <link>http://localhost:1313/project/residual-neural-networks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/project/residual-neural-networks/</guid>
-      <description>&lt;h3 id=&#34;leveraging-cnn-and-rnn-architectures&#34;&gt;Leveraging CNN and RNN architectures&lt;/h3&gt;
-</description>
     </item>
     
   </channel>
