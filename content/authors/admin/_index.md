@@ -94,7 +94,7 @@ work:
     date_start: 2022-01-11
     date_end: 
     summary: |-
-                      Conduct research on decision making for robot manipulation and task planning for manufacturing and publish to top-tier journals and confereneces.
+                    Conduct research on decision-making for robotic manipulation and task planning in manufacturing, and publish findings in top-tier journals and conferences.
 
   - position:  Engineering Intern (Undergraduate)
     company_name: Versa Products
