@@ -323,6 +323,16 @@
     </item>
     
     <item>
+      <title>Robotic Granular Material Scooping Industry Project</title>
+      <link>http://localhost:1313/project/granular/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/granular/</guid>
+      <description>&lt;h4 id=&#34;granular-material-scooping-with-sub-milliigram-accuracy&#34;&gt;Granular Material Scooping with Sub-milliigram accuracy&lt;/h4&gt;
+&lt;p&gt;Check out our paper published to iDETC: &lt;a href=&#39;https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2024/88353/V02BT02A048/1208808&#39;&gt;ASME Paper Link&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;Open Access: &lt;a href=&#39;https://www.researchgate.net/publication/385802042_A_Learning_Framework_for_Enabling_Robots_to_Autonomously_Dispense_Granular_Material_On-Demand&#39;&gt;Research Gate&lt;/a&gt;&lt;/p&gt; </description>
+    </item>
+    
+    <item>
       <title>Deep Neural Networks</title>
       <link>http://localhost:1313/project/deep-neural-networks/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
@@ -544,7 +554,7 @@
 
 
 
-&lt;div id=&#34;chart-293641857&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-637249815&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -562,7 +572,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-293641857&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-637249815&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
