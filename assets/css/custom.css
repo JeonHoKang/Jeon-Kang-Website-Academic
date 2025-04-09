@@ -190,8 +190,12 @@ footer a,
   color: #ffffff !important;
 }
 
-.skills-content {
-  width: 23rem;
+/* .skills-content {
+  width: 18rem;
   
+} */
+.resume-biography #profile {
+  text-align: center;
+  padding: 20px 0px;
+  position: relative;
 }
-
