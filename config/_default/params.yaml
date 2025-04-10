@@ -56,9 +56,13 @@ locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
 
+opengraph:
+  description: "Jeon Ho Kang Personal Website"
+  
 # Site features
 features:
   math:
     enable: false
   privacy_pack:
     enable: false
+
