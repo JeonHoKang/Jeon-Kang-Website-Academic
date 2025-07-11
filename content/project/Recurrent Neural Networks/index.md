@@ -1,5 +1,5 @@
 ---
-title: "Residual Neural Networks"
+title: "Recurrent Neural Networks"
 
 authors:
     - admin
